@@ -51,12 +51,12 @@ def hypothesis(X, theta):
   return X @ theta
 
 def compute_derived_cost_theta0(X, Y, theta):
-  """Derivation of the SSE cost function relative to the theta0 variable"""
+  """Derivative of the SSE cost function with respect to the theta0 variable"""
   n = len(Y)
   return np.sum(hypothesis(X, theta) - Y)
 
 def compute_derived_cost_theta1(X, Y, theta):
-  """Derivation of the SSE cost function relative to the theta1 variable"""
+  """Derivative of the SSE cost function with respect to the theta1 variable"""
   n = len(Y)
   return np.sum((hypothesis(X, theta) - Y) * X[:, 1])
 
